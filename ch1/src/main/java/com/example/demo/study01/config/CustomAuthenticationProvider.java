@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.study01.config;
 
 import java.util.List;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 // 인증 공급자 구현
 // - AuthenticationProvider 인터페이스를 구현한 클래스
-@Component
+//@Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override

@@ -1,9 +1,9 @@
-package com.example.demo.controller;
+package com.example.demo.study01.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 public class HelloController {
 
     @GetMapping("/api/v1/hello")

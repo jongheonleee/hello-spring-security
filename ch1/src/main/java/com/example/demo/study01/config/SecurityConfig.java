@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.study01.config;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -15,11 +15,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
+//@Configuration
 public class SecurityConfig {
 
     // 접근 권한 부여 재정의
-    @Bean
+//    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeHttpRequests((auth) -> auth.anyRequest().permitAll()) // 모든 요청에 대한 인증을 요구 x
@@ -29,7 +29,7 @@ public class SecurityConfig {
 
 
     // UserDetailsService 빈 등록(인메모리, 운영 과정에선 쓰면 안됨)
-    @Bean
+//    @Bean
     public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager inMemoryUserDetailsManager = new InMemoryUserDetailsManager();
 
@@ -45,7 +45,7 @@ public class SecurityConfig {
 
     // UserDetailsService를 빈으로 등록하면, 그에 따라 PasswordEncoder도 빈으로 등록해야 함
     // - 특정 구현체끼리 짝을 맺고 있음
-    @Bean
+//    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
